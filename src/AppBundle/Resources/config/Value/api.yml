@@ -1,0 +1,14 @@
+status_code:
+    200: Success|SUCCESS
+    400: Login invalid parameter|LOGIN_ERROR
+    401: API Key error|API_KEY_ERROR
+    402: API Key expired|API_KEY_EXPIRED
+    501: Email not found|EMAIL_NOT_FOUND
+    500: Process error|PROCESS_ERROR
+    600: Invalide parameter|INVALID_PARAMETER
+    601: Missing parameter|MISSING_PARAMETER
+    602: Record not found|RECORD_NOT_FOUND
+    603: Values are not correct|VALUE_NOT_CORRECT
+    604: Method is not correct|METHOD_NOT_CORRECT
+
+  

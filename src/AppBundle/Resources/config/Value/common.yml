@@ -1,0 +1,19 @@
+yes_no:
+  1: 有|YES
+  2: 無|NO
+
+is_checked:
+  0: NO|NO
+  1: YES|YES
+
+display:
+  0: 表示|YES
+  1: 非表示|NO
+
+disableFlag:
+  0: 有効|ENABLE
+  1: 無効|DISABLE
+
+regStatus:
+  1: ON|ON
+  0: OFF|OFF

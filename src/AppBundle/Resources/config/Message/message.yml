@@ -1,0 +1,66 @@
+common:
+  ERR:
+    password_not_unique: パスワードが一致していません。
+    email_not_unique: メールアドレスが一致していません。
+    max_length: 文字以内で入力してください。
+    required: を入力してください。
+    can_not_review_image: this image can not review
+    not_blank: この項目は必須項目です。
+    have_special_character: This allow only character in list (a-z, A-Z, 0-9, _ - .)
+  MSG:
+    save_success: 正常に登録されました。
+    mail_sent: メール送信が完了しました。
+
+
+login:
+  Bad_credentials: ログインIDとパスワードの組み合わせが正しくありません
+  email_flag: メールアドレスが未承認なため、ログインすることは出来ません
+  disable_flag: ログインIDとパスワードの組み合わせが正しくありません
+  lock_for_30_minutes: ログインIDとパスワードの組み合わせが正しくありません
+  passLost_30_minutes: 30分以上
+  temporary_flag: temporaryFlag
+  email_not_exist: 入力メールアドレスは存在しません。
+  email_not_null: メールアドレスを入力してください。
+
+user:
+  adminPassword: パスワード確認が失敗しました。
+  save_success: 正常に登録されました。
+  email_not_unique: "Email is exist"
+
+  ERR: 
+    not_exist: ユーザーが存在されません。
+
+validation:
+  format_wrong: 入力形式が正しくありません。
+  email_type: メールアドレスを正しく入力してください。
+  mapping: Have error when mapping
+
+api:
+  api_key_not_found: APIキーが存在しません。
+  user_provider_is_not_valid: (For developer)User Provider is not valid ( {{ class }} was given)
+  authenticate_fail: バリデーションが失敗しました。
+  instance_not_supported: (For developer)Instances of {{ class }} are not supported.
+
+shop:
+  ERR:
+    not_exist: ショップが存在されません。
+  MSG:
+    add_success: ショップを追加が完了しました。
+    edit_success: ショップ情報を更新が完了しました。
+
+item:
+    ERR:
+        not_exist: 商品が存在されません。
+    MSG:
+        add_success: 商品を追加が完了しました。
+        edit_success: 商品情報を更新が完了しました。
+        delete_success: 商品を削除が完了しました。
+
+faq:
+    MSG: 
+      success: FAQを登録が完了しました。
+
+content:
+  MSG:
+    term_success: 私用規約編集が完了しました。
+    privacy_success: プライバシーポリシー編集が完了しました。

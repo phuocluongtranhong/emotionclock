@@ -1,0 +1,45 @@
+<?php
+
+namespace {{ nameSpace }}\Entity;
+
+use Doctrine\DBAL\Types\BigIntType;
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * Bris\IntelBundle\Entity\{{ fileName }}
+ *
+ * @ORM\Table(name="{{ tableName }}")
+ * @ORM\Entity(repositoryClass="{{ nameSpace }}\Repository\{{ fileName }}Repository")
+ */
+class {{ fileName }}
+{
+  /**
+   * @ORM\Column(name="id", type="bigint")
+   * @ORM\Id
+   * @ORM\GeneratedValue(strategy="AUTO")
+   */
+  private $id;
+
+{% for arr in fields %}
+  /**
+{% if arr['relation'] is defined %}
+   * @ORM\{{ arr['relation'] }}(targetEntity="{{ arr['refTable'] }}")
+   * @ORM\JoinColumn(name="{{ arr[2] }}", referencedColumnName="id", nullable={{ arr[6]|lower == 'true' ? 'false' : 'true'}})
+{% else %}
+   * @ORM\Column(name="{{ arr[2] }}", type="{{ arr[3]|default('XXXX') }}"{{ (arr[3] == 'decimal') ? ', precision=' ~ arr['precision'] ~ ', scale=' ~ arr['scale'] : '' }}{{ arr[3] == 'string' and arr[4] > 0 ? ', length=' ~ arr[4] : '' }}, nullable={{ arr[6]|lower == 'true' ? 'false' : 'true'}})
+{% endif %}
+{% if arr['validator'] is defined %}
+   * @Assert\{{ arr['validator'] }}
+{% endif %}
+{% if arr[6]|lower == 'true' %}
+   * @Assert\NotBlank()
+{% endif %}
+{% if arr[4] > 0 and (arr[3] == 'string' or arr[3] == 'integer' or arr[3] == 'bigint' or arr[3] == 'smallint')  %}
+   * @Assert\Length(max = "{{ arr[4] }}")
+{% endif %}
+   */
+  private ${{ arr['fieldName'] }};
+
+{% endfor %}
+}

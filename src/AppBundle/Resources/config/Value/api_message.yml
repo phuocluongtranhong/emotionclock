@@ -1,0 +1,49 @@
+common:
+    1: Success|SUCCESS
+    2: Invalid parameters|INVALID_PARAMETER
+    3: Missing parameters|MISSING_PARAMETER
+    4: 該当するデータが存在しません|RECORD_NOT_FOUND
+    5: Values not correct|VALUE_NOT_CORRECT
+    6: Method is not correct|METHOD_NOT_CORRECT
+    7: Permission denied|PERMISSION_DENIED
+    8: Email has not sent|EMAIL_NOT_SEND
+    9: Invalid|INVALID
+login:
+    1: Login failure|LOGIN_ERROR
+    2: Email is not exist|INVALID_USER
+    3: Password is wrong|PASSWORD_WRONG
+    4: New password has 8 characters or more|NEW_PASSWORD_SHORT
+    5: Password has 8 characters or more|PASSWORD_SHORT
+    6: Current Password is incorrect.|OLD_PASSWORD_WRONG
+register:
+    1: This Email Already Exists|Email_Exist
+authenticate:
+    1: (For developer)Instances are not supported.|INSTANCE_NOT_SUPPORTED
+    2: (For developer)User Provider is not valid|INVALID_USER_PROVIDER
+    3: API キーの有効期限が過ごしました|API_KEY_EXPIRED
+    4: API キーが存在していません|INVALID_API_KEY
+
+change_password:
+    1: no email|NO_EMAIL
+    2: email sent|EMAIL_SENT
+    3: Reset Password|MAIL_TITLE
+    4: Your new password is|NEW_PASSWORD
+    5: Email is not a valid email address|NOT_VALID_EMAIL
+    6: Email is not exist|EMAIL_NOT_EXIST
+
+user:
+    1: Member is not valid.|INVALID_MEMBER
+    2: User is not admin.|USER_IS_NOT_ADMIN
+
+group:
+    1: Group is not exist|INVALID_GROUP
+    2: That group already exists.|GROUP_NAME_AVAILABLE
+user_group:
+    1: The invitation have not existed|INVITATION_NOT_EXISTED
+    2: Status invalid|INVITATION_STATUS_INVALID
+    3: User has been member of the group|IS_MEMBER
+    4: User has not been member of the group|IS_NOT_MEMBER
+
+message:
+    1: Information of Message is wrong.|WRONG_INFO
+    2: Message is not valid.|INVALID_MESSAGE

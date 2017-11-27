@@ -1,0 +1,43 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+#    service_name:
+#        class: AppBundle\Directory\ClassName
+#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+  #Entity Service
+  swiftmailer.mailer.default.transport:
+        class:     Swift_SendmailTransport
+        arguments: ['/usr/sbin/sendmail -t']
+
+  entity_service:
+    class: AppBundle\Services\EntityService
+    arguments: [ @doctrine.orm.entity_manager ]
+  #Doctrine listener
+  bris.doctrine_extension.listener:
+    class: AppBundle\EventListener\DoctrineExtensionListener
+    #calls:
+    #    - [ setContainer, [ @service_container ] ]
+    arguments: [ @service_container ]
+    tags:
+        - { name: doctrine.event_listener, event: prePersist, connection: default  }
+        - { name: doctrine.event_listener, event: preUpdate, connection: default  }
+
+  #bris.beforeFilter.listener:
+  #      class: AppBundle\EventListener\ControllerListener
+  #      arguments: [ @service_container ]
+  #      tags:
+  #          - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+  #          - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }
+  #API providers
+  api_key_user_provider:
+      class: AppBundle\Security\ApiKeyUserProvider
+      arguments: [ @doctrine.orm.entity_manager ]
+  #API authenticator
+  apikey_authenticator:
+      class:  AppBundle\Security\ApiKeyAuthenticator
+      public: false
+
+

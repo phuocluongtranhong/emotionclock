@@ -1,0 +1,10 @@
+type:
+    0: all_group_numbers|All_GROUP_NUMBERS
+    1: one_group_number|ONE_GROUP_NUMBER
+emotion:
+    1: Joy
+    2: OK
+    3: Meh
+    4: Sad
+    5: Afaid
+    6: Angry

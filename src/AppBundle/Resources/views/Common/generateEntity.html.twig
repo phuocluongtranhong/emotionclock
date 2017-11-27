@@ -1,0 +1,10 @@
+{% extends "::base.html.twig" %}
+{% block title "Generate Entity" %}
+
+{% block body %}
+  <form action="" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+
+    <input type="submit" value="Submit"/>
+  </form>
+{% endblock %}

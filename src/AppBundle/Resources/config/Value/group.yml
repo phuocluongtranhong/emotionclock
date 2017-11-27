@@ -1,0 +1,6 @@
+accept_status:
+    1: Agree|APPCEPT_STATUS
+    2: Decline|DECLINE_STATUS
+role:
+    0: Group member|GROUP_MEMBER
+    1: Admin|ADMIN
