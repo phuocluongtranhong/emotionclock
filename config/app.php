@@ -226,8 +226,8 @@ return [
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-            'username' => 'adminc2LgW6g',
-            'password' => '9spv12JQg46B',
+            'username' => 'root',
+            'password' => 'root',
             'database' => 'EmotionClock',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
